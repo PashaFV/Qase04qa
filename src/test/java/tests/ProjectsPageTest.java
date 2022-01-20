@@ -12,9 +12,8 @@ public class ProjectsPageTest extends BaseTest {
 
     @Test(description = "Create new project at qase.io")
     public void createNewProject(){
-        open("/login");//Засунуть в один клас логин
-        //$("#inputEmail").sendKeys(email);
-        //$(By.xpath("//*[@id='inputPassword']")).setValue(password).submit();
+        loginPage.openPage();
+        loginPage.login();
         $(By.id("createButton")).click();
         $(By.id("inputTitle")).sendKeys("test project Name");
         $(By.id("inputCode")).sendKeys("TPN");
