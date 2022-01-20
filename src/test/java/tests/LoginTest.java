@@ -1,5 +1,8 @@
+package tests;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import tests.BaseTest;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -7,12 +10,12 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test (description = "Login with valid data to https://qase.io")
     public void login(){
-      open("/login");
-      $("#inputEmail").sendKeys(email);
-      $(By.xpath("//*[@id='inputPassword']")).setValue(password).submit();
+      loginPage.openPage();
+      loginPage.login();
       $(By.id("createButton")).shouldBe(visible);
 
 }
+
 }
