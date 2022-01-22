@@ -10,8 +10,8 @@ import static com.codeborne.selenide.Selenide.open;
 public class LoginPage {
 
     public String email, password;
-    public static final By EMAIL_INPUT_LOCATOR = By.cssSelector("#inputEmail");
     public static final By PASSWORD_INPUT_LOCATOR = By.xpath("//*[@id='inputPassword']");
+    public static final By EMAIL_INPUT_LOCATOR = By.xpath("//*[@id='inputEmail']");
 
     public void openPage() {
         open("/login");
