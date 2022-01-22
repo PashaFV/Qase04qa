@@ -14,7 +14,7 @@ public class LoginPage {
     public static final By EMAIL_INPUT_LOCATOR = By.xpath("//*[@id='inputEmail']");
 
     public void openPage() {
-        open("/login");
+        open("https://app.qase.io/login");
     }
 
     public void login() {
