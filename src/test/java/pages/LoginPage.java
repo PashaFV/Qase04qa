@@ -18,8 +18,8 @@ public class LoginPage {
     }
 
     public void login() {
-        email=System.getenv().getOrDefault("QASE_EMAIL", PropertyReader.getProperty("qase.email"));
-        password=System.getenv().getOrDefault("QASE_PASSWORD", PropertyReader.getProperty("qase.password"));
+        email = System.getenv().getOrDefault("QASE_EMAIL", PropertyReader.getProperty("qase.email"));
+        password = System.getenv().getOrDefault("QASE_PASSWORD", PropertyReader.getProperty("qase.password"));
         $(EMAIL_INPUT_LOCATOR).sendKeys(email);
         $(PASSWORD_INPUT_LOCATOR).setValue(password).submit();
 
