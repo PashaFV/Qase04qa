@@ -8,7 +8,7 @@ import tests.BaseTest;
 public class CreateTestCaseTest extends BaseTest {
 
     @Test(description = "Create new test case at last created project")
-    public void createNewProject() {
+    public void createNewTestCase() {
         loginPage.openPage();
         loginPage.login();
         createCasePage.createNewTestCase();
