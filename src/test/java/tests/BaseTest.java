@@ -24,7 +24,7 @@ public class BaseTest {
     public void setUp() {
         //Configuration.headless = true;
         Configuration.baseUrl = System.getenv().getOrDefault("QASE_URL", PropertyReader.getProperty("qase.url"));
-        Configuration.browser = "firefox";
+        Configuration.browser = "chrome";
         Configuration.clickViaJs = true;
         Configuration.timeout = 100000;
         Configuration.savePageSource = false;
