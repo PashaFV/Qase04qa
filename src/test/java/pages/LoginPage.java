@@ -7,14 +7,14 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
 
     public String email, password;
     public static final By PASSWORD_INPUT_LOCATOR = By.xpath("//*[@id='inputPassword']");
     public static final By EMAIL_INPUT_LOCATOR = By.xpath("//*[@id='inputEmail']");
 
     public void openPage() {
-        open("https://app.qase.io/login");
+        open("/login");
     }
 
     public void login() {

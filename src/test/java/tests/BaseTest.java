@@ -40,7 +40,7 @@ public class BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-        //getWebDriver().quit();
+         getWebDriver().quit();
 
     }
 }
