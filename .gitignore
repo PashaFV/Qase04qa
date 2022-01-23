@@ -1,3 +1,4 @@
 # Project exclude paths
 /target/
 Qase04qa.iml
+config.properties
