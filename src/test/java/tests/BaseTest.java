@@ -7,7 +7,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import pages.CreateCasePage;
 import pages.LoginPage;
+import pages.ProjectsPage;
 import utils.PropertyReader;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -15,17 +17,21 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public class BaseTest {
 
     LoginPage loginPage;
+    ProjectsPage projectsPage;
+    CreateCasePage createCasePage;
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         //Configuration.headless = true;
         Configuration.baseUrl = System.getenv().getOrDefault("QASE_URL", PropertyReader.getProperty("qase.url"));
-        Configuration.browser = "firefox";
+        Configuration.browser = "chrome";
         Configuration.clickViaJs = true;
         Configuration.timeout = 100000;
         Configuration.savePageSource = false;
 
         loginPage = new LoginPage();
+        projectsPage = new ProjectsPage();
+        createCasePage = new CreateCasePage();
 
 //        ChromeOptions chromeOptions = new ChromeOptions();
 //        chromeOptions.addArguments("headless");
@@ -33,8 +39,8 @@ public class BaseTest {
     }
 
     @AfterClass(alwaysRun = true)
-    public void tearDown(){
-        //getWebDriver().quit();
+    public void tearDown() {
+         getWebDriver().quit();
 
     }
 }
