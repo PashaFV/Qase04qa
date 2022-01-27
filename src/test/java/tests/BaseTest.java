@@ -36,6 +36,7 @@ public class BaseTest {
 //        ChromeOptions chromeOptions = new ChromeOptions();
 //        chromeOptions.addArguments("headless");
 //        Configuration.browserCapabilities = chromeOptions;
+
     }
 
     @AfterClass(alwaysRun = true)

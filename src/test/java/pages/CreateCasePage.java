@@ -24,7 +24,7 @@ public class CreateCasePage {
         $(LAST_PROJECT_NAME).click();
         $(CREATE_CASE_BUTTON).click();
         $(TITLE_INPUT).setValue(faker.twinPeaks().location());
-        //$(DESCRIPTION_INPUT).setValue(faker.lordOfTheRings().location());
+        $(DESCRIPTION_INPUT).setValue(faker.lordOfTheRings().location());
         $(PRE_CONDITIONS_INPUT).setValue(faker.lordOfTheRings().location());
         $(SAVE_CASE_BUTTON).click();
         $(TITLE_TEST_CASES).shouldBe(visible);

@@ -12,5 +12,6 @@ public class ProjectsPageTest extends BaseTest {
         loginPage.login();
         projectsPage.createNewProject();
 
+
     }
 }
