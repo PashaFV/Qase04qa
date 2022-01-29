@@ -10,7 +10,7 @@ public class ResponseStatus {
 
     boolean status;
     String errorMessage;
-    ErrorFields errorFields;
+    //ErrorFields errorFields;
     Result result;
 
 }

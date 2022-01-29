@@ -40,7 +40,7 @@ public class ApiTest {
 
         assertEquals(actual, expected);
         assertEquals(actual.isStatus(), expected.isStatus());
-        //assertEquals(actual.getErrorMessage(), expected.getErrorMessage());
+        assertEquals(actual.getErrorMessage(), expected.getErrorMessage());
     }
 
     @Test(description = "Positive get empty project by code test")
