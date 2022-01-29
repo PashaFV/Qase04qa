@@ -11,7 +11,7 @@ public class BaseAdapter {
     public String post(String body, int statusCode, String url) {
         return given().
                 log().all().
-                header("Token", "012353711d7d9c144240b7b7ae8653d947d189bf").
+                header("Token", "ea36c3b3949f3c89597b91cd87fe573d5237c61e").
                 header("Content-Type", "application/json").
                 header("Accept", "application/json").
                 body(body).
@@ -29,7 +29,7 @@ public class BaseAdapter {
     public String get(int statusCode, String url) {
         return given().
                 log().all().
-                header("Token", "012353711d7d9c144240b7b7ae8653d947d189bf").
+                header("Token", "ea36c3b3949f3c89597b91cd87fe573d5237c61e").
                 header("Content-Type", "application/json").
                 header("Accept", "application/json").
                 when().

@@ -11,5 +11,6 @@ public class ResponseStatus {
     boolean status;
     String errorMessage;
     ErrorFields errorFields;
+    Result result;
 
 }
